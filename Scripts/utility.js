@@ -12,6 +12,21 @@ function setBgColor(elementId) {
   const element = document.getElementById(elementId);
   element.classList.add("bg-orange-400", "text-white");
 }
+function removeBgColor(elementId) {
+  const element = document.getElementById(elementId);
+  element.classList.remove("bg-orange-400", "text-white");
+}
+
+function getTextElementValueById(elementId) {
+  const element = document.getElementById(elementId);
+  const elementValueText = element.innerText;
+  const currentScore = parseInt(elementValueText);
+  return currentScore;
+}
+function setTextElementValueById(elementId, value) {
+  const element = document.getElementById(elementId);
+  element.innerText = value;
+}
 
 function getARandomAlphabet() {
   // get or create an alphabet array
@@ -28,6 +43,13 @@ function getARandomAlphabet() {
   const alphabet = alphabetArray[randomNumber];
   //   console.log(randomNumber, alphabet);
   return alphabet;
+}
+
+function getElementTextColorById(elementId) {
+  const element = document.getElementById(elementId);
+  const text = element.innerText;
+  const newText = text.toLowerCase();
+  return newText;
 }
 
 // another way create a random alphabet
